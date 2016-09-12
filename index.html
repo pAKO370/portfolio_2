@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Phil Fluegel</title>
+	<meta name="viewport" content="width=device-width, initial-scale= 1">
+	<meta name=”description” content=”Front-End-Web-Developer” >
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/mac.png">
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="nav">
+			<span class='ion-navicon-round'></span>
+			<div class='social-ul'>
+				<ul>
+						<a href="#form-container"><li><span class="ion-email"></span></li></a>
+						<a href="https://www.facebook.com/phil.fluegel?ref=br_rs"><li><span class="ion-social-facebook"></span></li></a>
+						<a href="https://github.com/pfluegel"><li><span class="ion-social-github"></span></li></a>
+						<a href="https://www.linkedin.com/in/phil-fluegel-a7b18642"><li><span class="ion-social-linkedin"></span></li></a>
+				</ul>
+			</div>
+			<ul class='nav-ul'>
+				<li class="nav arrow"><p> < </p></li>
+				<li class="nav" id='landing'>HOME</li>
+				<li class="nav" id='about'>ABOUT</li>
+				<li class="nav"  id='portfolio'>PORTFOLIO</li>
+				<li class="nav" id='contact'>CONTACT</li>
+			</ul>
+			<div class='notifications'>
+			<p class="mobile-x">x</p>
+				<div class="message-sent">
+					<h4>Thank you for submitting your info!</h4><h5>I will contact you shortly!</h5>
+				</div>
+				<div class="form-class">
+					<h1>Contact Me!</h1>
+					<form action="https://getsimpleform.com/messages?form_api_token=cb6f0abcaa9c9dca6ca6581bf7037db6" method="post" class="form-group has-danger">
+					 <input type='hidden' name='redirect_to' value='http://philips-macbook-pro.local:5757/?ckcachecontrol=1473445788' />
+					<div class="form-group">
+					<label for="">Email: </label>
+
+						<input id='email-input' type='email' name='email' class='form-control-sm' placeholder='Enter your eMail here!'>
+					</div>
+					<fieldset class='form-group'>
+						<label for='exampleTextarea'>Text: </label>
+						<textarea name='message' class='form-control' id='exampleTextarea' rows='4'>	
+						</textarea>
+					</fieldset>
+					<button class='btn btn-primary sub'>SEND</button></form>
+					<div id='send'>
+						<p>SEND</p>
+					</div>
+			</div>
+		</div>
+		<div class="landing">
+			<div class="header-container">
+				<h2 class="name">Phil Fluegel</h2>
+				<h1>Front-End Web Developer</h1>
+				<h2 id="skills">HTML  |  CSS  |  Javascript  |  jQuery  |  AngularJS</h2>
+			</div>
+		</div>	
+	</div>
+	
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="scripts/app.js"></script>
+</body>
+</html>

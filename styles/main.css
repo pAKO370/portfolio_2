@@ -1,0 +1,453 @@
+@keyframes flip {
+  0% {
+    opacity: 0.1;
+    transform: rotateY(90deg); }
+  100% {
+    opacity: 0.9;
+    transform: rotateY(0deg); } }
+@keyframes flip-away {
+  0% {
+    opacity: 0.9;
+    transform: rotateY(0deg); }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg); } }
+@media only screen and (min-width: 500px) {
+  body {
+    font-family: "Montserrat", sans-serif;
+    background-color: lightgray; }
+    body .wrapper {
+      position: relative;
+      max-width: 1400px;
+      margin: 0 auto;
+      background-color: RGBA(17, 28, 32, 1);
+      overflow: hidden; }
+      body .wrapper .nav {
+        width: 100%;
+        z-index: 10; }
+        body .wrapper .nav .social-ul {
+          position: absolute;
+          z-index: 13;
+          right: 0;
+          width: 275px; }
+          body .wrapper .nav .social-ul ul {
+            overflow: hidden; }
+            body .wrapper .nav .social-ul ul li {
+              float: left;
+              text-align: center;
+              list-style: none;
+              display: inline-block; }
+              body .wrapper .nav .social-ul ul li .ion-email, body .wrapper .nav .social-ul ul li .ion-social-facebook, body .wrapper .nav .social-ul ul li .ion-social-github, body .wrapper .nav .social-ul ul li .ion-social-linkedin {
+                font-size: 3.4rem;
+                display: block;
+                padding: 0.5rem;
+                margin-left: 20px;
+                color: rgba(255, 255, 255, 0.8);
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s; }
+        body .wrapper .nav .ion-navicon-round {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-size: 6rem;
+          padding: 0 10px;
+          opacity: 0.9;
+          color: rgba(255, 255, 255, 0.8);
+          transition: all 600ms ease-out;
+          cursor: pointer;
+          z-index: 11; }
+        body .wrapper .nav .nav-ul {
+          position: absolute;
+          top: 60px;
+          left: 0px;
+          margin: 0;
+          padding: 0;
+          perspective: 1000px;
+          z-index: 12; }
+          body .wrapper .nav .nav-ul .ion-chevron-left {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px; }
+          body .wrapper .nav .nav-ul li {
+            text-decoration: none;
+            width: 100%;
+            list-style: none;
+            padding: 20px 0;
+            margin: 30px 0px;
+            display: block;
+            width: 200px;
+            font-size: 2.5rem;
+            font-weight: 600;
+            border-radius: 0 2.5px 2.5px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            transform-origin: left;
+            text-align: center;
+            display: none; }
+          body .wrapper .nav .nav-ul li:nth-child(1) {
+            font-size: 3rem;
+            width: auto;
+            cursor: pointer;
+            padding: 10px 0 0 0; }
+          body .wrapper .nav .nav-ul .show:nth-child(1) {
+            display: block;
+            transform: rotateY(100deg);
+            animation-name: flip;
+            animation-duration: 300ms;
+            animation-delay: -200ms;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards; }
+          body .wrapper .nav .nav-ul .show:nth-child(2) {
+            display: block;
+            transform: rotateY(100deg);
+            animation-name: flip;
+            animation-duration: 300ms;
+            animation-delay: -50ms;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards; }
+          body .wrapper .nav .nav-ul .show:nth-child(3) {
+            display: block;
+            transform: rotateY(100deg);
+            animation-name: flip;
+            animation-duration: 300ms;
+            animation-delay: 100ms;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards; }
+          body .wrapper .nav .nav-ul .show:nth-child(4) {
+            display: block;
+            transform: rotateY(100deg);
+            animation-name: flip;
+            animation-duration: 300ms;
+            animation-delay: 250ms;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards; }
+          body .wrapper .nav .nav-ul .show:nth-child(5) {
+            display: block;
+            transform: rotateY(100deg);
+            animation-name: flip;
+            animation-duration: 300ms;
+            animation-delay: 400ms;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards; }
+          body .wrapper .nav .nav-ul .hide {
+            display: none; }
+            body .wrapper .nav .nav-ul .hide:nth-child(5) {
+              transform: rotateY(0deg);
+              animation-name: flip-away;
+              animation-duration: 300ms;
+              animation-delay: -200ms;
+              animation-timing-function: ease-in-out;
+              animation-fill-mode: forwards; }
+            body .wrapper .nav .nav-ul .hide:nth-child(4) {
+              transform: rotateY(0deg);
+              animation-name: flip-away;
+              animation-duration: 300ms;
+              animation-delay: -50ms;
+              animation-timing-function: ease-in-out;
+              animation-fill-mode: forwards; }
+            body .wrapper .nav .nav-ul .hide:nth-child(3) {
+              transform: rotateY(0deg);
+              animation-name: flip-away;
+              animation-duration: 300ms;
+              animation-delay: 100ms;
+              animation-timing-function: ease-in-out;
+              animation-fill-mode: forwards; }
+            body .wrapper .nav .nav-ul .hide:nth-child(2) {
+              transform: rotateY(0deg);
+              animation-name: flip-away;
+              animation-duration: 300ms;
+              animation-delay: 250ms;
+              animation-timing-function: ease-in-out;
+              animation-fill-mode: forwards; }
+            body .wrapper .nav .nav-ul .hide:nth-child(1) {
+              transform: rotateY(0deg);
+              animation-name: flip-away;
+              animation-duration: 300ms;
+              animation-delay: 400ms;
+              animation-timing-function: ease-in-out;
+              animation-fill-mode: forwards; }
+      body .wrapper .landing {
+        position: fixed;
+        top: 0;
+        min-height: 101vh;
+        transition: all 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        display: block;
+        z-index: 0;
+        background-image: url(../assets/images/header-background.png);
+        background-position: center center;
+        background-size: cover;
+        position: relative; }
+        body .wrapper .landing .padding-move {
+          padding-left: 300px; }
+        body .wrapper .landing .header-container {
+          position: absolute;
+          top: calc(50% - 135px);
+          left: calc(50% - 450px);
+          width: 900px;
+          transition: all 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+          text-align: center; }
+          body .wrapper .landing .header-container.margin-move {
+            left: 300px; }
+          body .wrapper .landing .header-container .name {
+            font-size: 3rem;
+            margin: 0px;
+            color: white;
+            text-align: left;
+            padding-left: 6%; }
+          body .wrapper .landing .header-container h1 {
+            font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+            font-size: 6.7rem;
+            font-weight: 800;
+            text-shadow: 1px 1px 30px white;
+            margin: 0; }
+          body .wrapper .landing .header-container #skills {
+            color: #99e600; }
+      body .wrapper .about {
+        background-image: url("http://probathroomremodeling.com/wp-content/uploads/2014/03/background-wallpaperwebsites-desktop-website-templates-web-1920x1080-wallpaper.jpg");
+        background-position: center center;
+        background-size: cover;
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        transition: all 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        z-index: 0;
+        padding: 25% 10%; }
+        body .wrapper .about.padding-move {
+          padding-left: 300px; }
+        body .wrapper .about h1 {
+          position: absolute;
+          top: calc(5% - 10px);
+          left: 0;
+          width: 100%;
+          text-align: center;
+          color: white; }
+      body .wrapper .portfolio {
+        background-image: url("http://www.hoteltitania.gr/images/horizontal_gallery/background.jpg");
+        background-position: center center;
+        background-size: cover;
+        min-height: 100vh;
+        position: relative;
+        margin: 0;
+        transition: all 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28); }
+        body .wrapper .portfolio.padding-move {
+          padding-left: 300px; }
+        body .wrapper .portfolio h1 {
+          text-align: center;
+          margin: 0;
+          position: absolute;
+          width: 100%;
+          top: 50px;
+          color: white; }
+        body .wrapper .portfolio h4 {
+          text-align: center;
+          margin: 0;
+          position: absolute;
+          width: 100%;
+          top: 95px;
+          color: white; }
+        body .wrapper .portfolio .black-box {
+          width: 92%;
+          padding-bottom: 55%;
+          background: black;
+          position: relative;
+          left: 50%;
+          top: 150px;
+          transform: translateX(-50%);
+          overflow: hidden;
+          border-radius: 4px;
+          transition: margin-left 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28); }
+          body .wrapper .portfolio .black-box.margin-move {
+            margin-left: 300px; }
+          body .wrapper .portfolio .black-box #right {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 100px; }
+            body .wrapper .portfolio .black-box #right img {
+              position: absolute;
+              top: calc(50% - 16px);
+              right: 15px; }
+          body .wrapper .portfolio .black-box #left {
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100px; }
+            body .wrapper .portfolio .black-box #left img {
+              position: absolute;
+              top: calc(50% - 16px);
+              left: 15px; }
+          body .wrapper .portfolio .black-box .black-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            float: left; }
+        body .wrapper .portfolio .description {
+          width: 80%;
+          left: 50%;
+          transform: translateX(-50%);
+          background: white;
+          height: 150px;
+          position: relative;
+          margin-top: 110px; }
+      body .wrapper .about-div {
+        background: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        width: 80%;
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+        top: calc(50% - 250px); }
+        body .wrapper .about-div .personal-tab {
+          width: 50%;
+          height: 60px;
+          background: rgba(255, 255, 255, 0.9);
+          float: left;
+          background: black;
+          color: #99e600;
+          transition: all 300ms ease-in-out; }
+          body .wrapper .about-div .personal-tab h3 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 800; }
+          body .wrapper .about-div .personal-tab.active-tab {
+            background: #99e600;
+            color: black;
+            box-shadow: -5px 5px 20px 6px black; }
+        body .wrapper .about-div .professional-tab {
+          width: 50%;
+          height: 60px;
+          background: black;
+          color: #99e600;
+          float: right;
+          transition: all 300ms ease-in-out; }
+          body .wrapper .about-div .professional-tab h3 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 800; }
+          body .wrapper .about-div .professional-tab.active-tab {
+            background: #99e600;
+            color: black;
+            box-shadow: 5px 5px 20px 6px black; }
+        body .wrapper .about-div #personal {
+          height: 100%;
+          widht: 300px; }
+          body .wrapper .about-div #personal .image {
+            position: relative;
+            width: 50%;
+            float: left;
+            padding: 5%; }
+            body .wrapper .about-div #personal .image img {
+              position: absolute;
+              width: 80%;
+              border-radius: 5px;
+              max-height: 350px;
+              max-width: 350px;
+              transform: translateX(-50%);
+              left: 50%;
+              box-shadow: 0 0 20px 3px black; }
+          body .wrapper .about-div #personal .text {
+            width: 50%;
+            float: right;
+            padding: 5%; }
+            body .wrapper .about-div #personal .text p {
+              margin-top: 20px;
+              font-size: 2rem; }
+        body .wrapper .about-div #professional {
+          height: 100%;
+          widht: 300px; }
+          body .wrapper .about-div #professional .image {
+            position: relative;
+            width: 50%;
+            float: left;
+            padding: 5%; }
+            body .wrapper .about-div #professional .image img {
+              position: absolute;
+              width: 80%;
+              border-radius: 5px;
+              max-height: 350px;
+              max-width: 350px;
+              transform: translateX(-50%);
+              left: 50%;
+              box-shadow: 0 0 20px 3px black; }
+          body .wrapper .about-div #professional .text {
+            width: 50%;
+            float: right;
+            padding: 5%; }
+            body .wrapper .about-div #professional .text p {
+              margin-top: 20px;
+              font-size: 1.9rem; }
+
+  .notifications {
+    background: RGBA(40, 38, 34, 1);
+    box-shadow: 0 0 80px 1px #99e600;
+    border-radius: 4px;
+    position: absolute;
+    width: 0px;
+    height: 450px;
+    top: 190px;
+    left: 340px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    margin-left: -95px;
+    cursor: default;
+    z-index: 1;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    transform-origin: left;
+    transform: scaleX(0);
+    transform: translateX(-30px);
+    color: white;
+    display: none; }
+    .notifications .mobile-x {
+      display: none; }
+    .notifications .form-class {
+      opacity: 0;
+      transition: opacity 200ms ease-in-out; }
+      .notifications .form-class.show-form {
+        opacity: 1; }
+    .notifications .message-sent {
+      width: 90%;
+      background: RGBA(48, 114, 171, 1);
+      margin: 5%;
+      padding: 10%;
+      border-radius: 10px; }
+      .notifications .message-sent h4 {
+        text-align: center; }
+      .notifications .message-sent h5 {
+        text-align: center; }
+    .notifications .form-class {
+      margin: 10% 2%; }
+    .notifications .sub {
+      opacity: 0; }
+    .notifications #send {
+      background: RGBA(48, 114, 171, 1);
+      width: 100px;
+      height: 40px;
+      border-radius: 5px;
+      padding: 9px 0px;
+      margin: 0;
+      position: relative;
+      right: 0;
+      text-align: center; }
+      .notifications #send p {
+        width: 100%;
+        text-align: center; }
+    .notifications:after {
+      top: 66%;
+      left: -46px;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(0, 151, 167, 0);
+      border-top-color: RGBA(40, 38, 34, 1);
+      border-width: 46px;
+      margin-left: -46px;
+      transform: rotate(90deg); }
+    .notifications.open {
+      width: 550px;
+      display: block;
+      opacity: 1;
+      transform: scaleX(1);
+      transform: translateX(0); } }
