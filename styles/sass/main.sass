@@ -1,9 +1,14 @@
-//body 
+body 
 	font-family: 'Montserrat', sans-serif
 	background-color: lightgray
 	.wrapper
 		position: relative
 		max-width: 1400px
+		height: 100vh
+		background: 
+			image: url(../assets/images/header-background.png)
+			position: center center
+			size: cover
 		margin: 0 auto
 		background-color: RGBA(17, 28, 32, 1.00)
 		overflow: hidden
@@ -15,10 +20,13 @@
 				position: absolute
 				z-index: 13
 				right: 0
-				width: 275px
+				width: 100%
 				ul
 					overflow: hidden
+					width: 100%
+					padding: 0
 					li
+						width: 25%
 						float: left
 						text-align: center
 						list-style: none
@@ -27,13 +35,13 @@
 							font-size: 3.4rem
 							display: block
 							padding: .5rem
-							margin-left: 20px
+							margin-left: 0px
 							color: rgba(255,255,255,.8)
 							-webkit-transition-duration: .4s
 							transition-duration: .4s
 			.ion-navicon-round
-				position: absolute
-				top: 10px
+				position: fixed
+				top: 30px
 				left: 10px
 				font-size: 6rem
 				padding: 0 10px
@@ -42,15 +50,15 @@
 				transition: all 600ms ease-out
 				cursor: pointer
 				z-index: 11
-
 			.nav-ul
-				position: absolute
+				position: fixed
 				top: 60px
 				left: 0px
 				margin: 0
 				padding: 0
 				perspective: 1000px
 				z-index: 12
+				width: 100%
 				.ion-chevron-left
 					background: rgba(255,255,255,.8)
 					padding: 40px
@@ -59,9 +67,9 @@
 					width: 100%
 					list-style: none
 					padding: 20px 0
-					margin: 30px 0px
+					margin: 20px 0px
 					display: block
-					width: 200px
+					width: 100%
 					font-size: 2.5rem
 					font-weight: 600
 					border-radius: 0 2.5px 2.5px 0
@@ -88,11 +96,11 @@
 								timing-function: ease-in-out
 								fill-mode: forwards
 				.hide
-
-					display: none
+					//display: none
 
 					@for $i from 1 through 5
 						&:nth-child(#{(6 - $i)})
+							display: none
 							transform: rotateY(0deg)
 							animation: 
 								name: flip-away
@@ -109,36 +117,41 @@
 			z-index: 0
 			.padding-move
 				padding-left: 300px
-			background: 
+			//background: 
 				image: url(../assets/images/header-background.png)
 				position: center center
 				size: cover
 			position: relative
 			.header-container
 				position: absolute
-				top: calc(50% - 135px)
-				left: calc(50% - 450px)
-				width: 900px
+				top: calc(50% - 35px)
+				transform: translateX(-50%)
+				left: 50%
+				width: 320px
 				transition: all 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28)
 				text-align: center
 				&.margin-move
-					left: 300px
+					left: 50%
+					opacity: .2
 				.name
-					font-size: 3rem
+					font-size: 1rem
 					margin: 0px
 					color: white
 					text-align: left
 					padding-left: 6%
 				h1
+					color: white
 					font-family: "Source Sans Pro",Helvetica,Arial,sans-serif
-					font-size: 6.7rem
+					font-size: 2.7rem
 					font-weight: 800
 					text-shadow: 1px 1px 30px white
 					margin: 0
 				#skills
+					font-size: 1.3rem
+					margin-top: 5px
 					color: #99e600
 		.about
-			background: 
+			//background: 
 				image: url('http://probathroomremodeling.com/wp-content/uploads/2014/03/background-wallpaperwebsites-desktop-website-templates-web-1920x1080-wallpaper.jpg')
 				position: center center
 				size: cover
@@ -151,47 +164,41 @@
 			z-index: 0
 			padding: 25% 10%
 			&.padding-move
+				opacity: 0
 				padding-left: 300px
-			h1
-				position: absolute
-				top: calc(5% - 10px)
-				left: 0
-				width: 100%
-				text-align: center
-				color: white
 		.portfolio
-			background: 
+			//background: 
 				image: url('http://www.hoteltitania.gr/images/horizontal_gallery/background.jpg')
 				position: center center
 				size: cover
 			min-height: 100vh
 			position: relative
 			margin: 0
-			//display: none
 			transition: all 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28)
+			opacity: 1
 			&.padding-move
-				padding-left: 300px
+				opacity: 0
 			h1
 				text-align: center
 				margin: 0
-				position: absolute
+				position: relative
 				width: 100%
-				top: 50px
+				top: 130px
 				color: white
 			h4
 				text-align: center
 				margin: 0
 				position: absolute
 				width: 100%
-				top: 95px
+				top: 165px
 				color: white
 			.black-box
-				width: 92%
-				padding-bottom: 55%
+				width: 99%
+				padding-bottom: 62%
 				background: black
 				position: relative
 				left: 50%
-				top: 150px
+				top: 230px
 				transform: translateX(-50%)
 				overflow: hidden
 				border-radius: 4px
@@ -238,11 +245,12 @@
 			background: rgba(255,255,255,.9)
 			position: absolute
 			width: 80%
-			height: 500px
+			height: 450px
 			border-radius: 10px
 			overflow: hidden
-			top: calc(50% - 250px)
+			top: calc(50% - 180px)
 			.personal-tab
+				cursor: pointer
 				width: 50%
 				height: 60px
 				background: rgba(255,255,255,.9)
@@ -251,6 +259,7 @@
 				color: #99e600
 				transition: all 300ms ease-in-out
 				h3
+					font-size: 1.5rem
 					text-align: center
 					text-transform: uppercase
 					font-weight: 800
@@ -259,6 +268,7 @@
 					color: black
 					box-shadow: -5px 5px 20px 6px black
 			.professional-tab
+				cursor: pointer
 				width: 50%
 				height: 60px
 				background: black
@@ -266,6 +276,7 @@
 				float: right
 				transition: all 300ms ease-in-out
 				h3
+					font-size: 1.5rem
 					text-align: center
 					text-transform: uppercase
 					font-weight: 800
@@ -278,126 +289,116 @@
 				height: 100%
 				widht: 300px
 				.image
+					margin-top: 60px
 					position: relative
-					width: 50%
-					float: left
+					width: 100%
 					padding: 5%
+					height: 260px
 					img
 						position: absolute
 						width: 80%
 						border-radius: 5px
 						max-height: 350px
-						max-width: 350px
+						max-width: 200px
 						transform: translateX(-50%)
 						left: 50%
 						box-shadow: 0 0 20px 3px black
 				.text
-					width: 50%
-					float: right
+					position: relative
+					width: 100%
 					padding: 5%
 					p
 						margin-top: 20px
-						font-size: 2rem
+						font-size: 1.3rem
 			#professional
 				height: 100%
 				widht: 300px
 				.image
+					margin-top: 60px
 					position: relative
-					width: 50%
-					float: left
+					width: 100%
 					padding: 5%
+					height: 260px
+					
 					img
 						position: absolute
 						width: 80%
 						border-radius: 5px
 						max-height: 350px
-						max-width: 350px
 						transform: translateX(-50%)
 						left: 50%
 						box-shadow: 0 0 20px 3px black
+						max-width: 200px
 				.text
-					width: 50%
-					float: right
+					position: relative
+					width: 100%
 					padding: 5%
 					p
-						margin-top: 20px
-						font-size: 1.9rem
-//.notifications
-	background: RGBA(40, 38, 34, 1.00)
-	box-shadow: 0 0 80px 1px #99e600
-	//display: none
-	border-radius: 4px
-	position: absolute
-	width: 0px
-	height: 450px
-	top: 190px
-	left: 340px
-	padding: 0px 10px
-	margin-bottom: 10px
-	margin-left: -95px
-	cursor: default
-	z-index: 1
-	opacity: 0
-	transition: all 500ms ease-in-out
-	transform-origin: left
-	transform: scaleX(0)
-	transform: translateX(-30px)
-	color: white
-	display: none
-	.mobile-x
-		display: none
-	.form-class
-		opacity: 0
-		transition: opacity 200ms ease-in-out
-		&.show-form
-			opacity: 1
-	.message-sent
-		width: 90%
-		background: RGBA(48, 114, 171, 1.00)
-		margin: 5%
-		padding: 10%
-		border-radius: 10px
-		h4
-			text-align: center
-		h5
-			text-align: center
-	.form-class
-		margin: 10% 2%
-	.sub
-		opacity: 0
-	#send
-		background: RGBA(48, 114, 171, 1.00)
-		width: 100px
-		height: 40px
-		border-radius: 5px
-		padding: 9px 0px
-		margin: 0
-		position: relative
-		right: 0
-		text-align: center
-		p
+						margin-top: -40px
+						font-size: 1.2rem
+		.notifications
+			background: RGBA(40, 38, 34, 1.00)
+			box-shadow: 0 0 80px 1px #99e600
+			display: none
+			border-radius: 4px
+			position: absolute
 			width: 100%
-			text-align: center
-	&:after
-		top: 66%
-		left: -46px
-		border: solid transparent
-		content: " "
-		height: 0
-		width: 0
-		position: absolute
-		pointer-events: none
-		border-color: rgba(0, 151, 167, 0)
-		border-top-color: RGBA(40, 38, 34, 1.00)
-		border-width: 46px
-		margin-left: -46px
-		transform: rotate(90deg)
-	&.open
-		width: 550px
-		display: block
-		opacity: 1
-		transform: scaleX(1)
-		transform: translateX(0)
+			height: 450px
+			top: 160px
+			left: 0px
+			padding: 0px 10px
+			margin-bottom: 10px
+			margin-left: 0px
+			cursor: default
+			z-index: 100
+			opacity: 0
+			transition: all 500ms ease-in-out
+			transform-origin: left
+			transform: scaleX(0)
+			transform: translateX(-30px)
+			color: white
+			display: none
+			.mobile-x
+				display: none
+			.form-class
+				opacity: 0
+				transition: opacity 200ms ease-in-out
+				&.show-form
+					opacity: 1
+			.message-sent
+				width: 90%
+				background: RGBA(48, 114, 171, 1.00)
+				margin: 5%
+				padding: 10%
+				border-radius: 10px
+				h4
+					text-align: center
+				h5
+					text-align: center
+			.form-class
+				margin: 10% 2%
+			.sub
+				opacity: 0
+			#send
+				background: RGBA(48, 114, 171, 1.00)
+				width: 100px
+				height: 40px
+				border-radius: 5px
+				padding: 9px 0px
+				margin: 0
+				position: relative
+				right: 0
+				text-align: center
+				p
+					width: 100%
+					text-align: center
+			&:after
+			&.open
+				width: 100%
+				display: block
+				opacity: 1
+				transform: scaleX(1)
+				transform: translateX(0)
 		
     
 
@@ -423,8 +424,60 @@
 
 	
 	//--------------------------------------------
+	//--------------------------------------------
+	//--------------------------------------------
+	//--------------------------------------------
+	//--------------------------------------------
+	//--------------------------------------------
+	//--------------------------------------------
+	//--------------------------------------------
+	//--------------------------------------------
+
+	//--------------------------------------------
+	//--------------------------------------------
+	//--------------------------------------------
+	//--------------------------------------------
 
 @media only screen and (min-width: 500px)
+	body
+		.wrapper
+			.landing
+				.header-container
+					width: 500px
+					.name
+						font-size: 2rem
+					h1
+						font-size: 4.2rem
+						margin: 0
+					#skills
+						font-size: 1.9rem
+						margin-top: 10px
+			.about-div
+				.personal-tab
+					h3
+						font-size: 2.2rem
+				.professional-tab
+					h3
+						font-size: 2.2rem
+
+				#personal
+					.image
+						img
+							max-height: 225px
+							max-width: 200px
+					.text
+						p
+							margin-top: -10px
+							font-size: 1.7rem
+				#professional
+					.image
+						img
+					.text
+						padding: 5%
+						p
+							font-size: 1.5rem
+					
+@media only screen and (min-width: 800px)
 	body 
 		font-family: 'Montserrat', sans-serif
 		background-color: lightgray
@@ -478,6 +531,7 @@
 					padding: 0
 					perspective: 1000px
 					z-index: 12
+					width: 200px
 					.ion-chevron-left
 						background: rgba(255,255,255,.8)
 						padding: 40px
@@ -536,20 +590,20 @@
 				z-index: 0
 				.padding-move
 					padding-left: 300px
-				background: 
+				//background: 
 					image: url(../assets/images/header-background.png)
 					position: center center
 					size: cover
 				position: relative
 				.header-container
 					position: absolute
-					top: calc(50% - 135px)
-					left: calc(50% - 450px)
+					top: calc(50% - 115px)
 					width: 900px
 					transition: all 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28)
 					text-align: center
 					&.margin-move
-						left: 300px
+						opacity: .9
+						left: 600px
 					.name
 						font-size: 3rem
 						margin: 0px
@@ -563,9 +617,11 @@
 						text-shadow: 1px 1px 30px white
 						margin: 0
 					#skills
+						font-size: 2.3rem
+						margin-top: 5px
 						color: #99e600
 			.about
-				background: 
+				//background: 
 					image: url('http://probathroomremodeling.com/wp-content/uploads/2014/03/background-wallpaperwebsites-desktop-website-templates-web-1920x1080-wallpaper.jpg')
 					position: center center
 					size: cover
@@ -578,16 +634,9 @@
 				z-index: 0
 				padding: 25% 10%
 				&.padding-move
-					padding-left: 300px
-				h1
-					position: absolute
-					top: calc(5% - 10px)
-					left: 0
-					width: 100%
-					text-align: center
-					color: white
+					opacity: 1
 			.portfolio
-				background: 
+				//background: 
 					image: url('http://www.hoteltitania.gr/images/horizontal_gallery/background.jpg')
 					position: center center
 					size: cover
@@ -597,7 +646,7 @@
 				//display: none
 				transition: all 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28)
 				&.padding-move
-					padding-left: 300px
+					opacity: 1
 				h1
 					text-align: center
 					margin: 0
@@ -618,7 +667,7 @@
 					background: black
 					position: relative
 					left: 50%
-					top: 150px
+					top: 130px
 					transform: translateX(-50%)
 					overflow: hidden
 					border-radius: 4px
@@ -666,49 +715,35 @@
 				position: absolute
 				width: 80%
 				height: 500px
-				border-radius: 10px
-				overflow: hidden
-				top: calc(50% - 250px)
+				top: calc(50% - 275px)
+				max-width: 1000px
+				left: 50%
+				transform: translateX(-50%)
+				transition: margin-left 800ms cubic-bezier(0.18, 0.89, 0.32, 1.28)
+				&.padding-move
+					margin-left: 150px
 				.personal-tab
 					width: 50%
 					height: 60px
-					background: rgba(255,255,255,.9)
 					float: left
-					background: black
-					color: #99e600
-					transition: all 300ms ease-in-out
 					h3
-						text-align: center
-						text-transform: uppercase
-						font-weight: 800
-					&.active-tab
-						background: #99e600
-						color: black
-						box-shadow: -5px 5px 20px 6px black
+						font-size: 2.4rem
 				.professional-tab
 					width: 50%
 					height: 60px
-					background: black
-					color: #99e600
 					float: right
-					transition: all 300ms ease-in-out
 					h3
-						text-align: center
-						text-transform: uppercase
-						font-weight: 800
-					&.active-tab
-						background: #99e600
-						color: black
-						box-shadow: 5px 5px 20px 6px black
-
+						font-size: 2.4rem
 				#personal
 					height: 100%
 					widht: 300px
 					.image
+						margin-top: 0px
 						position: relative
 						width: 50%
 						float: left
 						padding: 5%
+						height: auto
 						img
 							position: absolute
 							width: 80%
@@ -721,7 +756,6 @@
 					.text
 						width: 50%
 						float: right
-						padding: 5%
 						p
 							margin-top: 20px
 							font-size: 2rem
@@ -729,10 +763,12 @@
 					height: 100%
 					widht: 300px
 					.image
+						margin-top: 0
 						position: relative
 						width: 50%
 						float: left
 						padding: 5%
+						height: auto
 						img
 							position: absolute
 							width: 80%
@@ -749,82 +785,82 @@
 						p
 							margin-top: 20px
 							font-size: 1.9rem
-	.notifications
-		background: RGBA(40, 38, 34, 1.00)
-		box-shadow: 0 0 80px 1px #99e600
-		//display: none
-		border-radius: 4px
-		position: absolute
-		width: 0px
-		height: 450px
-		top: 190px
-		left: 340px
-		padding: 0px 10px
-		margin-bottom: 10px
-		margin-left: -95px
-		cursor: default
-		z-index: 1
-		opacity: 0
-		transition: all 500ms ease-in-out
-		transform-origin: left
-		transform: scaleX(0)
-		transform: translateX(-30px)
-		color: white
-		display: none
-		.mobile-x
-			display: none
-		.form-class
-			opacity: 0
-			transition: opacity 200ms ease-in-out
-			&.show-form
-				opacity: 1
-		.message-sent
-			width: 90%
-			background: RGBA(48, 114, 171, 1.00)
-			margin: 5%
-			padding: 10%
-			border-radius: 10px
-			h4
-				text-align: center
-			h5
-				text-align: center
-		.form-class
-			margin: 10% 2%
-		.sub
-			opacity: 0
-		#send
-			background: RGBA(48, 114, 171, 1.00)
-			width: 100px
-			height: 40px
-			border-radius: 5px
-			padding: 9px 0px
-			margin: 0
-			position: relative
-			right: 0
-			text-align: center
-			p
-				width: 100%
-				text-align: center
-		&:after
-			top: 66%
-			left: -46px
-			border: solid transparent
-			content: " "
-			height: 0
-			width: 0
-			position: absolute
-			pointer-events: none
-			border-color: rgba(0, 151, 167, 0)
-			border-top-color: RGBA(40, 38, 34, 1.00)
-			border-width: 46px
-			margin-left: -46px
-			transform: rotate(90deg)
-		&.open
-			width: 550px
-			display: block
-			opacity: 1
-			transform: scaleX(1)
-			transform: translateX(0)
+			.notifications
+				background: RGBA(40, 38, 34, 1.00)
+				box-shadow: 0 0 80px 1px #99e600
+				//display: none
+				border-radius: 4px
+				position: absolute
+				width: 0px
+				height: 450px
+				top: 190px
+				left: 340px
+				padding: 0px 10px
+				margin-bottom: 10px
+				margin-left: -95px
+				cursor: default
+				z-index: 1
+				opacity: 0
+				transition: all 500ms ease-in-out
+				transform-origin: left
+				transform: scaleX(0)
+				transform: translateX(-30px)
+				color: white
+				display: none
+				.mobile-x
+					display: none
+				.form-class
+					opacity: 0
+					transition: opacity 200ms ease-in-out
+					&.show-form
+						opacity: 1
+				.message-sent
+					width: 90%
+					background: RGBA(48, 114, 171, 1.00)
+					margin: 5%
+					padding: 10%
+					border-radius: 10px
+					h4
+						text-align: center
+					h5
+						text-align: center
+				.form-class
+					margin: 10% 2%
+				.sub
+					opacity: 0
+				#send
+					background: RGBA(48, 114, 171, 1.00)
+					width: 100px
+					height: 40px
+					border-radius: 5px
+					padding: 9px 0px
+					margin: 0
+					position: relative
+					right: 0
+					text-align: center
+					p
+						width: 100%
+						text-align: center
+				&:after
+					top: 66%
+					left: -46px
+					border: solid transparent
+					content: " "
+					height: 0
+					width: 0
+					position: absolute
+					pointer-events: none
+					border-color: rgba(0, 151, 167, 0)
+					border-top-color: RGBA(40, 38, 34, 1.00)
+					border-width: 46px
+					margin-left: -46px
+					transform: rotate(90deg)
+				&.open
+					width: 550px
+					display: block
+					opacity: 1
+					transform: scaleX(1)
+					transform: translateX(0)
 
 
 
